@@ -1,0 +1,43 @@
+.t-section{
+	margin-bottom: 70px;
+}
+.site-text{
+	&__body{
+		@include flexbox();
+		justify-content: space-between;
+		align-items: flex-start;
+
+		@media (max-width:$md2+px){
+			flex-direction: column;
+			padding: 0px 15px 0px 15px;
+		}
+	}
+	&__image{
+		max-height: 300px;
+
+		@media (max-width:$md2+px){
+			transform: rotate(90deg);
+			margin-left: 185px;
+		}
+	}
+	&__contant{
+		
+		padding-top: 15px;
+		@media (min-width:$md2+px){
+			margin-left: 40px;
+		}
+		@media (max-width:$md2+px){
+			margin-top: -90px;
+		}
+		p{
+	    font-family: 'PT Sans';
+	    font-weight: normal;
+	    font-size: 15px;
+	    margin-bottom: 32px;
+	    text-align: justify;
+	    &:last-child{
+	    	margin-bottom: 0;
+	    }
+		}
+	}
+}

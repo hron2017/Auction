@@ -1,0 +1,98 @@
+.footer{
+	background-color: #1c242a;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	&-body{
+		@include flexbox();
+		justify-content: space-between;
+		align-items: flex-start;
+
+		@media (max-width:$md2+px){
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__logo{
+		position: relative;
+		@media (max-width:$md2+px){
+			margin-bottom: 45px;
+		}
+		&:before{
+			content:'Все права защищены © 2014';
+			position: absolute;
+			top: 45px;
+			left: 0;
+			font-size: 11px;
+			color: #8a7551;
+		}
+	}
+	&-nav{
+		margin: 0px 40px 0px 50px;
+		@media (max-width:$md2+px){
+			margin-bottom: 35px;
+		}
+		&__list{
+			@include flexbox();
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+		li{
+			margin-right: 13px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		&__link{
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+			color: #fff;
+			text-transform: uppercase;
+			font-size: 14px;
+			line-height: 20px;
+
+			@media (max-width:$md2+px){
+				font-size: 18px;
+				line-height: 26px;
+			}
+		}
+	}
+	&-phone{
+		
+    text-align: right;
+    @media (min-width:$md2+px){
+    	flex: 0 0 230px;
+    }
+		&__link{
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+			position: relative;
+			font-size: 14px;
+			color: #bb9c66;
+			padding-left: 14px;
+			border-bottom: 1px dotted #bb9c66;
+			&:before{
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 10px;
+				height: 12px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				background-image: url(../img/phonelink-icon.png);
+			}
+		}
+
+		.phone{
+			@include flexbox();
+			font-family: 'PF Din Text Cond Pro';
+			font-size: 35px;
+			color: #bb9c66;
+			margin-bottom: 9px;
+			span{
+				font-size: 15px;
+			}
+		}
+	}
+}

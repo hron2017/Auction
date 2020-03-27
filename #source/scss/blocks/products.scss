@@ -1,0 +1,225 @@
+.section{
+	&-head{
+		text-align: center;
+		padding-top: 83px;
+	}
+	&-body{
+		@include flexbox();
+		justify-content: space-between;
+	}
+	&__column{
+		width: 25%;
+		font-size: 20px;
+	}
+	&-btn{
+		font-size: 21px;
+		font-family: 'Myriad Pro';
+		text-transform: uppercase;
+		color:#000;
+		width: 102px;
+		height: 102px;
+		border-radius: 50%;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid #906731;
+		position: relative;
+
+		@media (max-width:$md2+px){
+			width: 78px;
+    	height: 78px;
+    	font-size: 16px;
+		}
+	}
+}
+.title-img{
+	background-color: transparent;
+	margin-bottom: 45px;
+  box-shadow: 0px 11px 17px 0px #d8c5a4;
+  border-radius: 50%;
+}
+.products{
+	&-slider{
+		margin: 0 -40px;
+		margin-bottom: 50px;
+	}
+	&-slide{
+		padding: 0px 40px;
+		text-align: center;
+	}
+
+	&__btn{
+		color:#000 ;
+		font-size: 21px;
+		padding: 14px 15px;
+	}
+}
+.slide-item{
+	display: flex;
+  flex-direction: column;
+  height: 89%;
+	&__image{
+		padding-top: 98%;
+		border: 3px solid #bb9c66;
+		position: relative;
+		margin-bottom: 27px;
+	}
+	&__timer{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #fff;
+		position: absolute;
+		bottom: -3px;
+		left: 50%;
+		margin-left: -50px;
+	}
+	&__title{
+		font-size: 21px;
+		font-family: 'PF Din Text Cond Pro';
+		font-weight: 500;
+		text-transform: uppercase;
+		flex-grow: 1;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	&__body{
+		text-align: center;
+		@include flexbox();
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 35px;
+		span{
+			display: block;
+			font-size: 14px;
+			font-family: 'PT Sans';
+			font-weight: normal;
+		}
+	}
+	&__column{
+		position: relative;
+		border-bottom: 1px solid #bb9c66;
+		&:nth-child(2){
+			border-bottom: none;
+		}
+	}
+	&__rate{
+		font-size: 30px;
+		font-family: 'PT Sans Narrow', sans-serif;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	&__rates{
+		width: 20%;
+		justify-content: center;
+		@include flexbox();
+		flex-direction: column;
+		align-items: center;
+	}
+	&__views{
+		width: 20%;
+		justify-content: center;
+		@include flexbox();
+		flex-direction: column;
+		align-items: center;
+	}
+	&-views__icon{
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(../img/products/views.png);
+		width: 25px;
+		height: 25px;
+		margin-bottom: 7px;
+	}
+	&-rate__icon{
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(../img/products/rate.png);
+		width: 25px;
+		height: 25px;
+		margin-bottom: 7px;
+	}
+	&__rhombus{
+		width: 79px;
+		height: 79px;
+		border: 1px solid #bb9c66;
+		position: absolute;
+		top: 7px;
+		left: 50%;
+		transform: rotate(45deg);
+		position: absolute;
+		margin-left: -40px;
+	}
+}
+
+.timer{
+	text-align: center;
+	&-icon{
+		position: absolute;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(../img/products/timer-icon.png);
+		width: 15px;
+		height: 15px;
+  	top: 11px;
+    right: -7px;
+	}
+	&-time{
+		font-size: 18px;
+		font-family: 'PT Sans Narrow', sans-serif;
+		position: absolute;
+		top: 34px;
+    left: -34px;
+	}
+}
+
+
+.products-bottons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+	position: relative;
+	@media (max-width:$md2+px){
+		flex-direction: column;
+	}
+	
+
+	
+	.slick-prev, .slick-next{
+		font-size: 0;
+		background-color: transparent;	
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		height: 25px;
+    width: 140px;
+
+ 
+	}
+	.slick-prev{
+		background-image: url(../img/products/btn-bf.png);
+	  @media (max-width:$md2+px){
+	    position: absolute;
+	    top: -24px;
+	    left: 0;
+    }
+	}
+	.slick-next{
+		background-image: url(../img/products/btn-af.png);
+	  @media (max-width:$md2+px){
+	    position: absolute;
+	    top: -24px;
+	    right: 0;    }
+	}
+}
+
+.products-slider {
+	min-width: 0;
+	.slick-track{
+		display: flex;
+	}
+}

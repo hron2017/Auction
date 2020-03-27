@@ -1,0 +1,41 @@
+
+
+.title{
+	font-family: 'PF Din Text Cond Pro';
+	font-weight: 500;
+	font-size: 35px;
+	margin-bottom: 30px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.subtitle{
+	font-family: 'Ceremonious One';
+	margin-bottom: 30px;
+	color:#bb9c66;
+	font-size: 40px;
+	line-height: 40px;
+}
+.section{
+		&-title{
+		margin-bottom: 20px;
+		position: relative;
+		&:after, &:before{
+			content:'';
+			position: absolute;
+			top: 175%;		
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 43%;
+			height: 100%;
+		}
+		&:after{
+			background-image: url(../img/title-af.png);
+			left: 0;
+		}
+		&:before{
+			background-image: url(../img/title-bf.png);
+			right: 0;
+		}
+	}
+}

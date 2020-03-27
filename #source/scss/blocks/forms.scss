@@ -1,0 +1,73 @@
+//<FORM>====================================================================================================
+.form{
+	position: relative;
+	
+
+	@media (min-width:$md2+px){
+		width: 40%;
+	}
+}
+.form-row{@include flexbox();margin: 0px -15px;}
+.form__column{padding: 0px 15px;}
+.form-input{}
+.form__btn{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 25px;
+	font-size: 21px;
+	font-weight: 500;
+	font-family: 'PF Din Text Cond Pro';
+	text-transform: uppercase;
+	background-color: transparent;
+	padding-left: 21px;
+	padding-right: 30px;
+	&:before{
+		content:'';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 1px;
+		background-color: #bb9c66;
+	}
+	&:after{
+		content:'';
+		position: absolute;
+		top: 50%;
+		margin-top: -10px;
+		right: 0;
+		height: 20px;
+		width: 28px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-image: url(../img/events/events-btn.png);
+	}
+}
+//</FORM>====================================================================================================
+
+
+
+//<INPUT>====================================================================================================
+input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.input{
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 15px 20px;
+	border: 2px solid #bb9c66;
+	&.focus{
+	}
+	&.err{
+		border: 2px solid red;
+		@include anim(0.3s,0s);
+	}
+}
+textarea.input{
+	resize:none;
+	padding: 0px 0px;
+}
+//</INPUT>====================================================================================================
+
+

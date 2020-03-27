@@ -1,0 +1,15 @@
+//<BUTTONS>====================================================================================================
+.btn{
+	font-family: 'PF Din Text Cond Pro';
+	font-weight: 500;
+	color: #fff;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 18px 48px 18px 48px;
+	text-align: center;
+	border: 4px solid;
+  border-image: linear-gradient(180deg, #c7ac7c, #906731) 1;
+	&:hover{}
+	&.fw{width: 100%;}
+}
+//</BUTTONS>====================================================================================================

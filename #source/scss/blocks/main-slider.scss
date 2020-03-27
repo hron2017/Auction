@@ -1,0 +1,133 @@
+.section{
+	position: relative;
+}
+.main-slider{
+	&__body{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	&__contant{
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content:center;
+		align-items: center;
+		padding-top: 32px;
+	}
+	&__item{
+		height: 430px;
+		position: relative;
+	}
+	&__subtitle {
+		@media (max-width:$md2+px){
+			font-size: 28px;
+			margin-bottom: 12px;
+		}
+	}
+	&__title{
+		font-weight: normal;
+
+		@media (max-width:$md2+px){
+			font-size: 28px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+	&__btn{
+		position: absolute;
+		background-color: #3e3e3e;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100px;
+		height: 50px;
+		/*border-left: 70px solid transparent;
+		border-right: 70px solid transparent;
+		border-bottom: 60px solid #3e3e3e;*/
+	}
+	/*&__icon{
+
+		top: 50px;
+		left: -12px;
+	}*/
+	&__txt{
+		font-family: 'PT Sans';
+		font-weight: normal;
+		text-align: center;	
+		font-size: 15px;
+		line-height: 25px;
+		max-width: 692px;
+		margin: 0 auto;
+		margin-bottom: 50px;
+
+		@media (max-width:$md2+px){
+			font-size: 12px;
+			line-height: 18px;
+	    margin-bottom: 28px;
+		}
+	}
+}
+
+.main-slider{
+	&__btn{
+		z-index: 5;
+		&-{
+	    border-left: 50px solid transparent;
+	    border-right: 50px solid transparent;
+	    border-bottom: 50px solid #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.slick-btn{
+			position: absolute;
+			top: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 20px;
+			width: 20px;
+		}
+		.slick-prev{
+			left: 0;
+		}
+		.slick-next{
+			right: 0;
+		}
+	}
+	&__icon{
+		height: 27px;
+		width: 27px;
+		background-image: url(../img/mainSlider/slider-btn-icon.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -14px;
+	}
+}
+/*
+.slick-btn{
+	position: absolute;
+	top: 50px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	font-size: 0;
+	background-color: transparent;
+	height: 20px;
+	width: 20px;
+}
+.slick-prev{
+	background-image: url(../img/mainSlider/slider-btn-next.png);
+	left: -40px;
+}
+.slick-next{
+	right: -40px;
+	background-image: url(../img/mainSlider/slider-btn-prev.png);
+}
+*/
