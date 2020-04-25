@@ -1,40 +1,40 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
 @font-face {
-  font-family: 'Ceremonious One';
+  font-family: "Ceremonious One";
   src: url("../fonts/CeremoniousOne.eot");
   src: url("../fonts/CeremoniousOne.eot?#iefix") format("embedded-opentype"), url("../fonts/CeremoniousOne.woff2") format("woff2"), url("../fonts/CeremoniousOne.woff") format("woff"), url("../fonts/CeremoniousOne.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Myriad Pro';
+  font-family: "Myriad Pro";
   src: url("../fonts/MyriadPro-Regular.woff2") format("woff2"), url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'PF Din Text Cond Pro';
+  font-family: "PF Din Text Cond Pro";
   src: url("../fonts/PFDinTextCondPro-Medium.eot");
   src: url("../fonts/PFDinTextCondPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCondPro-Medium.woff2") format("woff2"), url("../fonts/PFDinTextCondPro-Medium.woff") format("woff"), url("../fonts/PFDinTextCondPro-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
-  font-family: 'PF Din Text Cond Pro';
+  font-family: "PF Din Text Cond Pro";
   src: url("../fonts/PFDinTextCondPro-Regular.eot");
   src: url("../fonts/PFDinTextCondPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PFDinTextCondPro-Regular.woff2") format("woff2"), url("../fonts/PFDinTextCondPro-Regular.woff") format("woff"), url("../fonts/PFDinTextCondPro-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   src: url("../fonts/PTSans-Regular.woff2") format("woff2"), url("../fonts/PTSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   src: url("../fonts/PTSans-Bold.eot");
   src: url("../fonts/PTSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans-Bold.woff2") format("woff2"), url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.ttf") format("truetype");
   font-weight: bold;
@@ -45,21 +45,30 @@
   margin: 0px;
   border: 0px; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-:focus, :active {
+:focus,
+:active {
   outline: none; }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none; }
 
-aside, nav, footer, header, section {
+aside,
+nav,
+footer,
+header,
+section {
   display: block; }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -84,7 +93,9 @@ body {
         position: fixed;
         overflow: hidden; } }
 
-input, button, textarea {
+input,
+button,
+textarea {
   font-family: ""; }
 
 input::-ms-clear {
@@ -97,7 +108,8 @@ button::-moz-focus-inner {
   padding: 0;
   border: 0; }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none; }
 
 a:hover {
@@ -109,7 +121,12 @@ ul li {
 img {
   vertical-align: top; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: inherit;
   font-size: inherit; }
 
@@ -449,7 +466,6 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 20px; } }
   .main-slider__btn {
     position: absolute;
-    background-color: #3e3e3e;
     bottom: 0;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -461,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
 		border-right: 70px solid transparent;
 		border-bottom: 60px solid #3e3e3e;*/ }
   .main-slider__txt {
-    font-family: 'PT Sans';
+    font-family: "PT Sans";
     font-weight: normal;
     text-align: center;
     font-size: 15px;
@@ -477,7 +493,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-slider__btn {
   z-index: 5; }
-  .main-slider__btn- {
+  .main-slider__btn-triangle {
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 50px solid #fff;
@@ -487,15 +503,22 @@ h1, h2, h3, h4, h5, h6 {
   .main-slider__btn .slick-btn {
     position: absolute;
     top: 100%;
+    background: initial;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     height: 20px;
-    width: 20px; }
+    width: 20px;
+    font-size: 0;
+    z-index: 3; }
   .main-slider__btn .slick-prev {
-    left: 0; }
+    left: 7px;
+    background-image: url(../img/mainSlider/main-slider-btn-prev.png);
+    top: 82%; }
   .main-slider__btn .slick-next {
-    right: 0; }
+    right: 11px;
+    background-image: url(../img/mainSlider/main-slider-btn-next.png);
+    top: 82%; }
 
 .main-slider__icon {
   height: 27px;
@@ -505,9 +528,10 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  bottom: 0;
+  bottom: -13px;
   left: 50%;
-  margin-left: -14px; }
+  margin-left: -14px;
+  z-index: 3; }
 
 /*
 .slick-btn{
@@ -1132,7 +1156,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 5; }
     .categories__column:before, .categories__column:after {
-      content: '';
+      content: "";
       position: absolute;
       width: 10px;
       height: 10px;
@@ -1149,7 +1173,7 @@ h1, h2, h3, h4, h5, h6 {
       bottom: 17px;
       left: 50%;
       margin-left: -5px; }
-    .categories__column:nth-last-child(-n+3):before {
+    .categories__column:nth-last-child(-n + 3):before {
       display: none; }
   .categories__item {
     width: 250px;
@@ -1174,7 +1198,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding: 0px 30px 0px 30px; }
     .categories__item:after {
-      content: '';
+      content: "";
       background-color: #000;
       width: 100%;
       height: 100%;
@@ -1186,15 +1210,18 @@ h1, h2, h3, h4, h5, h6 {
     .categories__item-icon {
       z-index: 5;
       position: absolute;
-      top: 20px; }
+      top: 20px;
+      padding-bottom: 32%;
+      width: 82px; }
     .categories__item-title {
-      font-family: 'PF Din Text Cond Pro';
+      font-family: "PF Din Text Cond Pro";
       font-weight: 500;
       font-size: 21px;
       line-height: 25px;
       color: #fff;
       text-transform: uppercase;
-      z-index: 5; }
+      z-index: 5;
+      margin-top: 20px; }
     .categories__item-figure {
       position: absolute;
       bottom: 37px;

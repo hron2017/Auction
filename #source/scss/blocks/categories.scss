@@ -1,69 +1,69 @@
-.categories{
+.categories {
 	overflow: hidden;
 	position: relative;
-	
+
 	padding-top: 12px;
 	padding-bottom: 15px;
 
-	@media (min-width:$md2+px){
+	@media (min-width: $md2+px) {
 		margin-bottom: 110px;
 	}
-	&__body{
+	&__body {
 		@include flexbox();
 		justify-content: center;
 		flex-wrap: wrap;
 		position: relative;
 
-		@media (min-width:$md4+px){
+		@media (min-width: $md4+px) {
 			justify-content: space-between;
 		}
 	}
-	&__column{
+	&__column {
 		flex: 0 0 26%;
 		position: relative;
 		z-index: 5;
-		&:before, &:after{
-			content:'';
-			position: absolute;	
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
 			width: 10px;
 			height: 10px;
 			background-color: #bb9c66;
 			border-radius: 50%;
 		}
-		&:after{
-			
-			@media (min-width:$md4+px){
+		&:after {
+			@media (min-width: $md4+px) {
 				top: 50%;
 				right: -54px;
 				transform: translateY(-50%);
 			}
 		}
-		&:before{
+		&:before {
 			bottom: 17px;
 			left: 50%;
 			margin-left: -5px;
 		}
-		&:nth-last-child(-n+3){
-			&:before{
+		&:nth-last-child(-n + 3) {
+			&:before {
 				display: none;
 			}
 		}
 	}
-	&__item{
+	&__item {
 		width: 250px;
 		height: 250px;
 		position: relative;
 		z-index: 5;
 		border-radius: 50%;
-		margin-bottom: 50px;	
+		margin-bottom: 50px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		padding: 0px 30px 0px 30px;
-		&:after{
-			content:'';
+		&:after {
+			content: "";
 			background-color: #000;
 			width: 100%;
 			height: 100%;
@@ -73,28 +73,31 @@
 			opacity: 0.6;
 			border-radius: 50%;
 		}
-		&-icon{
+		&-icon {
 			z-index: 5;
 			position: absolute;
 			top: 20px;
+			padding-bottom: 32%;
+			width: 82px;
 		}
-		&-title{
-			font-family: 'PF Din Text Cond Pro';
+		&-title {
+			font-family: "PF Din Text Cond Pro";
 			font-weight: 500;
 			font-size: 21px;
 			line-height: 25px;
-			color:#fff;
+			color: #fff;
 			text-transform: uppercase;
 			z-index: 5;
+			margin-top: 20px;
 		}
-		&-figure{
+		&-figure {
 			position: absolute;
 			bottom: 37px;
 			display: flex;
-			span{
+			span {
 				display: block;
-				z-index: 5;	
-				&:nth-child(2){
+				z-index: 5;
+				&:nth-child(2) {
 					background-color: transparent;
 					bottom: 37px;
 					width: 20px;
@@ -102,17 +105,17 @@
 					border: 1px solid #bb9c66;
 					z-index: 5;
 					transform: rotate(45deg);
-			    margin: 0 15px;
+					margin: 0 15px;
 				}
-				&:first-child{
-			    margin-top: 10px;
+				&:first-child {
+					margin-top: 10px;
 					left: -55px;
 					width: 27px;
 					height: 1px;
 					background-color: #bb9c66;
 				}
-				&:last-child{
-			    margin-top: 10px;
+				&:last-child {
+					margin-top: 10px;
 					width: 27px;
 					height: 1px;
 					right: -15px;
@@ -121,14 +124,14 @@
 			}
 		}
 	}
-	&__bg{
-		@media (min-width:$md1+px){
+	&__bg {
+		@media (min-width: $md1+px) {
 			position: absolute;
 			top: 0;
 			left: 0;
 			background-image: url(../img/categories/categories-bg.png);
 			background-position: top;
-	    background-repeat: repeat-y;
+			background-repeat: repeat-y;
 			width: 100%;
 			height: 150%;
 			z-index: -1;

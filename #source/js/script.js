@@ -1,8 +1,8 @@
 //====================  ImageBg ========================//
-function ibg(){
-  $.each($('.ibg'), function(index, val) {
-    if($(this).find('img').length>0){
-      $(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
+function ibg() {
+  $.each($('.ibg'), function (index, val) {
+    if ($(this).find('img').length > 0) {
+      $(this).css('background-image', 'url("' + $(this).find('img').attr('src') + '")');
     }
   });
 }
@@ -15,8 +15,8 @@ $('.main-slider').slick({
   prevArrow: '<button type="button" class="slick-prev slick-btn">1</button>',
   nextArrow: '<button type="button" class="slick-next slick-btn">2</button>',
   arrows: true,
-  appendArrows:$('.main-slider__btn')
-});  
+  appendArrows: $('.main-slider__btn')
+});
 
 $('.quotes__slider').slick({
   speed: 1000,
@@ -24,27 +24,26 @@ $('.quotes__slider').slick({
   prevArrow: '<button type="button" class="slick-prev slick-btn">1</button>',
   nextArrow: '<button type="button" class="slick-next slick-btn">2</button>',
   arrows: true,
-  appendArrows:$('.quotes-slider__btn')
-}); 
+  appendArrows: $('.quotes-slider__btn')
+});
 
-$('.quotes-slider__btn .slick-prev').click(function(){
+$('.quotes-slider__btn .slick-prev').click(function () {
   let degrees = 180,
-      angle = $(this).data("angle");
+    angle = $(this).data("angle");
   if (!angle)
-  angle = 0;
+    angle = 0;
   angle = +angle + degrees;
   $(this)
     .data("angle", angle)
-    .css({ transform: "rotate(" + angle + "deg)"});
+    .css({ transform: "rotate(" + angle + "deg)" });
 });
-
 
 $('.products-slider').slick({
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 1,
   arrows: true,
-  appendArrows:$('.products-bottons'),
+  appendArrows: $('.products-bottons'),
   responsive: [
     {
       breakpoint: 790,
